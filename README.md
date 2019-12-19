@@ -5,7 +5,7 @@
 ## Install
 
 ```
-composer require ytetsuro/php-javalike-enum
+composer require javalikeenum/enum
 ```
 
 ## Using
