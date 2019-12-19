@@ -1,0 +1,23 @@
+[*.php]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_size = 4
+indent_style = space
+trim_trailing_whitespace = true
+
+[*.css]
+charset = utf-8
+indent_size = 4
+indent_style = tab
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.twig]
+charset = utf-8
+indent_size = 4
+indent_style = tab
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true

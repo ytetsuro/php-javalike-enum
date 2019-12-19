@@ -1,0 +1,53 @@
+{
+    "name": "java-like-enum/enum",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tetsuro Yoshikawa",
+            "email": "phper.0o0@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^3.2",
+        "friendsofphp/php-cs-fixer": "^2.11",
+        "phpmd/phpmd": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "JavaLikeEnum\\Enum\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JavaLikeEnum\\Enum\\": [
+                "tests/",
+                "tests/Fake"
+            ]
+        }
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ],
+        "tests": [
+            "@cs",
+            "vendor/bin/phpmd src,tests text ./phpmd.xml",
+            "@test"
+        ],
+        "coverage": [
+            "php -dzend_extension=xdebug.so ./vendor/bin/phpunit --coverage-text --coverage-html=build/coverage"
+        ],
+        "cs": [
+            "vendor/bin/php-cs-fixer fix -v --dry-run"
+        ],
+        "cs-fix": [
+            "vendor/bin/php-cs-fixer fix -v",
+            "vendor/bin/phpcbf src tests"
+        ]
+    }
+}
