@@ -2,6 +2,12 @@
 
 @todo
 
+## Install
+
+```
+composer require ytetsuro/php-javalike-enum
+```
+
 ## Using
 
 create enum.
